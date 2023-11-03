@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  position: relative;
+}
+section * {
+  transition: 1s;
+}
+section > figure,
+section span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-clip-path: polygon(52% 0, 100% 0%, 100% 100%, 62% 100%);
+          clip-path: polygon(52% 0, 100% 0%, 100% 100%, 62% 100%);
+  overflow: hidden;
+}
+section > figure > img,
+section span > img {
+  width: 100%;
+  height: 100%;
+}
+section > span {
+  display: flex;
+  z-index: 2;
+  background-image: linear-gradient(45deg, rgba(56, 46, 87, 0.662745098), rgba(101, 52, 90, 0.7176470588));
+  width: 100%;
+  height: 100%;
+}
+section a {
+  position: absolute;
+  bottom: 10%;
+  left: 50px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(45deg, #382E57, #65345A);
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  z-index: 5;
+  text-transform: uppercase;
+  font-size: 1.2vw;
+}
+section a:hover {
+  animation: btn 1s forwards;
+}
+section a:hover ~ span, section a:hover ~ figure {
+  -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+section > .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+section > .container > * {
+  background-image: linear-gradient(45deg, #382E57, #65345A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section > .container > a:hover ~ p {
+  animation: colortext 1s forwards;
+}
+section > .container > h3 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+section > .container > h1 {
+  width: 100%;
+  font-size: 3.8rem;
+  font-weight: bolder;
+}
+section > .container > h1 > strong {
+  background-color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section > .container p {
+  width: 55%;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-align: justify;
+  line-height: 20px;
+}
+
+@keyframes btn {
+  0% {
+    background-image: linear-gradient(45deg, #382E57, #65345A);
+    color: #ffffff;
+  }
+  100% {
+    background-image: linear-gradient(45deg, #ffffff, #ffffff);
+    color: #382E57;
+  }
+}/*# sourceMappingURL=master.css.map */
