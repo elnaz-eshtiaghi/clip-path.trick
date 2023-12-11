@@ -1,4 +1,4 @@
-# Accordion-trick-clip path
+#Clip-path.trick
 **If you have a lot of information to display on your site, why don't you use my project**
 
 ![Screenshot_2023_10_31-7](https://github.com/elnaz-eshtiaghi/clip-path/assets/146030206/66228749-0b05-483b-bab1-f15a0ac6ba6c)
